@@ -24,7 +24,7 @@ There are 3 types of tests:
    These end up in documentation and ensure documentation stays in sync with code.
 
 2. tests in ``when isMainModule:`` block, ran by ``nim c mymod.nim``
-   ``nimble test`` also typially runs these in external nimble packages.
+   ``nimble test`` also typically runs these in external nimble packages.
 
 3. testament tests, e.g.: ``tests/stdlib/tos.nim`` (only used for Nim repo).
 
@@ -344,7 +344,7 @@ unless stack allocation is needed (e.g. for efficiency).
 .. _use_doAssert_not_echo:
 Tests (including in testament) should always prefer assertions over ``echo``,
 except when that's not possible. It's more precise, easier for readers and
-maintaners to where expected values refer to. See for example
+maintainers to where expected values refer to. See for example
 https://github.com/nim-lang/Nim/pull/9335 and https://forum.nim-lang.org/t/4089
 
 .. code-block:: nim
@@ -491,7 +491,7 @@ Time handling, especially the ``Time`` type are also covered by this rule.
 Existing, battle-tested modules stay
 ------------------------------------
 
-Reason: There is no benefit in moving them around just to fullfill some design
+Reason: There is no benefit in moving them around just to fulfill some design
 fashion as in "Nim's core MUST BE SMALL". If you don't like an existing module,
 don't import it. If a compilation target (e.g. JS) cannot support a module,
 document this limitation.

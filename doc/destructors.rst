@@ -225,7 +225,7 @@ A sink parameter
 *may* be consumed once in the proc's body but doesn't have to be consumed at all.
 The reason for this is that signatures
 like ``proc put(t: var Table; k: sink Key, v: sink Value)`` should be possible
-without any further overloads and ``put`` might not take owership of ``k`` if
+without any further overloads and ``put`` might not take ownership of ``k`` if
 ``k`` already exists in the table. Sink parameters enable an affine type system,
 not a linear type system.
 
@@ -560,7 +560,7 @@ as ``x[0] = y[0]; x[1] = y[1]; ...``, likewise for ``=sink`` and ``=destroy``.
 Other value-based compound types like ``object`` and ``array`` are handled
 correspondingly. For ``object`` however, the compiler generated hooks
 can be overridden. This can also be important to use an alternative traversal
-of the involved datastructure that is more efficient or in order to avoid
+of the involved data structure that is more efficient or in order to avoid
 deep recursions.
 
 
